@@ -1,0 +1,62 @@
+  <body>
+    <div class="px-8 py-4">
+      <button
+        class="button elevation-2 uppercase font-semibold tracking-widest text-white uppercase bg-red-600 rounded-full text-md md:text-lg hover:bg-red-500 elevation-2"
+        on="tap:divplayer.show"
+      >
+        Show div player
+      </button>
+
+      <button
+        class="button elevation-2 uppercase font-semibold tracking-widest text-white uppercase bg-red-600 rounded-full text-md md:text-lg hover:bg-red-500 elevation-2"
+        on="tap:my-lightbox"
+      >
+        Open LightBox
+      </button>
+    </div>
+
+    <amp-lightbox id="my-lightbox" layout="nodisplay">
+      <div
+        class="lightbox"
+        on="tap:my-lightbox.close"
+        role="button"
+        tabindex="0"
+      >
+        <amp-story-player layout="fixed" width="360" height="600">
+          <a
+            href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/"
+          >
+            Stories in AMP - Hello World
+          </a>
+          <a
+            href="https://www.theloadout.com/web-stories/biggest-streamers.html"
+          >
+            Stories in AMP - Hello World
+          </a>
+        </amp-story-player>
+      </div>
+    </amp-lightbox>
+
+    <div id="divplayer" hidden>
+      <div
+			  class="lightbox"
+				on="tap:divplayer.hide"
+				role="button"
+				tabindex="0"
+			>
+        <amp-story-player layout="fixed" width="360" height="600">
+          <a
+            href="https://preview.amp.dev/documentation/examples/introduction/stories_in_amp/"
+          >
+            Stories in AMP - Hello World
+          </a>
+          <a
+            href="https://www.theloadout.com/web-stories/biggest-streamers.html"
+          >
+            Stories in AMP - Hello World
+          </a>
+        </amp-story-player>
+      </div>
+    </div>
+
+  </body>
